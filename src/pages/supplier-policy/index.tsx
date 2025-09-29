@@ -10,7 +10,7 @@ type Props = {};
 const SupplierPolicyPage = (props: Props) => {
   return (
     <div className="grid grid-cols-4 gap-4 p-4">
-      <div className="col col-span-1">
+      <div className="col col-span-1 sticky top-0 self-start">
         <Accordion
           type="single"
           collapsible
@@ -18,50 +18,154 @@ const SupplierPolicyPage = (props: Props) => {
           defaultValue="item-1"
         >
           <AccordionItem value="item-1">
-            <AccordionTrigger>
-              Quy định về SHTT và bảo mật thông tin
+            <AccordionTrigger className="pr-0 [&>svg]:hidden">
+              <a href="#common-rule" className="w-full inline-block">
+                Nguyên tắc
+              </a>
             </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-              <p>Xử lý vi phạm Quyền SHTT trên Sàn TripC</p>
-              <p>Cam kết bảo mật thông tin</p>
-            </AccordionContent>
           </AccordionItem>
+
+          <AccordionItem value="item-3">
+            <AccordionTrigger className="pr-0 [&>svg]:hidden">
+              <a href="#common-regulation" className="w-full inline-block">
+                Quy định chung
+              </a>
+            </AccordionTrigger>
+          </AccordionItem>
+
           <AccordionItem value="item-2">
-            <AccordionTrigger>Quy định liên quan đơn hàng</AccordionTrigger>
+            <AccordionTrigger>Quy trình giao dịch</AccordionTrigger>
             <AccordionContent className="flex flex-col gap-4 text-balance">
-              <p>Chính sách vận chuyển, giao hàng và đổi trả</p>
-              <p>Chính sách vận hành đơn và xử lý vi phạm</p>
-              <p>Chính sách giải quyết khiếu nại</p>
-              <p>Chính sách hoàn tiền</p>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger>
-              Quy định về kinh doanh và sản phẩm được lên Sàn TripC
-            </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-              <p>Đăng khuyến mại</p>
-              <p>Danh mục hàng hóa, dịch vụ kinh doanh có điều kiện</p>
-              <p>Danh mục hàng hóa, dịch vụ không được quảng cáo</p>
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-3">
-            <AccordionTrigger>
-              Quyền và nghĩa vụ cơ bản của Nhà cung cấp
-            </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-              <p>Quyền lợi của Nhà cung cấp</p>
-              <p>Nghĩa vụ của Nhà cung cấp</p>
-              <p>Ngừng hợp tác trên Sàn TripC</p>
+              <a href="#service-user">
+                Quy trình dành cho Người sử dụng dịch vụ
+              </a>
+              <a href="#service-supplier">
+                Quy trình dành cho Người cung cấp dịch vụ
+              </a>
+              <a href="#delivery-method">Phương thức vận chuyển giao nhận</a>
+              <a href="#delivery-refund">Chính sách đổi trả/hủy và hoàn tiền</a>
+              <a href="#delivery-handle">Chính sách kiểm hàng</a>
+              <a href="#delivery-warranty">Chính sách bảo hành</a>
+              <a href="#delivery-complaint">
+                Quy trình giải quyết tranh chấp, khiếu nại
+              </a>
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-3">
-            <AccordionTrigger>Quy chế hoạt động sàn</AccordionTrigger>
+          <AccordionItem value="item-4">
+            <AccordionTrigger className="pr-0 [&>svg]:hidden">
+              <a href="#payment-procedure" className="w-full inline-block">
+                Quy trình thanh toán
+              </a>
+            </AccordionTrigger>
+          </AccordionItem>
+
+          <AccordionItem value="item-5">
+            <AccordionTrigger className="pr-0 [&>svg]:hidden">
+              <a href="#secure-transactions" className="w-full inline-block">
+                Đảm bảo an toàn giao dịch
+              </a>
+            </AccordionTrigger>
+          </AccordionItem>
+
+          <AccordionItem value="item-6">
+            <AccordionTrigger className="pr-0 [&>svg]:hidden">
+              <a
+                href="#technical-responsibility"
+                className="w-full inline-block"
+              >
+                Trách nhiệm trong trường hợp phát sinh sự cố kỹ thuật
+              </a>
+            </AccordionTrigger>
+          </AccordionItem>
+
+          <AccordionItem value="item-7">
+            <AccordionTrigger className="pr-0 [&>svg]:hidden">
+              <a href="#personal-infor-policy" className="w-full inline-block">
+                Chính sách Bảo vệ thông tin cá nhân của người tiêu dùng
+              </a>
+            </AccordionTrigger>
+          </AccordionItem>
+
+          <AccordionItem value="item-8">
+            <AccordionTrigger className="pr-0 [&>svg]:hidden">
+              <a href="#app-management" className="w-full inline-block">
+                Quản lý thông tin trên Ứng dụng
+              </a>
+            </AccordionTrigger>
+          </AccordionItem>
+
+          <AccordionItem value="item-9">
+            <AccordionTrigger>
+              <a
+                href="#permission-responsibility-app"
+                className="w-full inline-block"
+              >
+                Quyền và trách nhiệm của Ban quản lý Ứng dụng TripC
+              </a>
+            </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-4 text-balance">
-              <p>Quy chế hoạt động sàn</p>
+              <a href="#permission-app">Quyền của Ban quản lý Ứng dụng TripC</a>
+              <a href="#responsibility-app">
+                Nghĩa vụ và trách nhiệm của Ban quản lý Ứng dụng TripC
+              </a>
             </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-10">
+            <AccordionTrigger>
+              <a
+                href="#permission-responsibility-app-supplier"
+                className="w-full inline-block"
+              >
+                Quyền và trách nhiệm của Người cung cấp dịch vụ trên Ứng dụng
+                TripC
+              </a>
+            </AccordionTrigger>
+            <AccordionContent className="flex flex-col gap-4 text-balance">
+              <a href="#permission-app-supplier">
+                Quyền của Người cung cấp dịch vụ trên Ứng dụng TripC
+              </a>
+              <a href="#responsibility-app-supplier">
+                Nghĩa vụ và trách nhiệm của Ban quản lý Ứng dụng TripC
+              </a>
+            </AccordionContent>
+          </AccordionItem>
+
+           <AccordionItem value="item-13">
+            <AccordionTrigger>
+              <a
+                href="#permission-responsibility-app-user"
+                className="w-full inline-block"
+              >
+                Quyền và trách nhiệm của Người sử dụng dịch vụ trên Ứng dụng
+                TripC
+              </a>
+            </AccordionTrigger>
+            <AccordionContent className="flex flex-col gap-4 text-balance">
+              <a href="#permission-app-user">
+                Quyền của Người sử dụng dịch vụ trên Ứng dụng cung cấp dịch vụ TMĐT TripC
+              </a>
+              <a href="#responsibility-app-user">
+                Nghĩa vụ và trách nhiệm Người sử dụng dịch vụ trên Ứng dụng cung cấp dịch vụ TMĐT TripC
+              </a>
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-11">
+            <AccordionTrigger className="pr-0 [&>svg]:hidden">
+              <a href="#corrective-measure" className="w-full inline-block">
+                Biện pháp xử lý vi phạm dịch vụ TMĐT TripC
+              </a>
+            </AccordionTrigger>
+          </AccordionItem>
+
+          <AccordionItem value="item-12">
+            <AccordionTrigger className="pr-0 [&>svg]:hidden">
+              <a href="#applicable-terms" className="w-full inline-block">
+                Điều khoản áp dụng
+              </a>
+            </AccordionTrigger>
           </AccordionItem>
         </Accordion>
       </div>
@@ -74,7 +178,9 @@ const SupplierPolicyPage = (props: Props) => {
         </div>
 
         <ul className="mt-10">
-          <li className="font-medium">I. Nguyên tắc chung</li>
+          <li className="font-medium" id="common-rule">
+            I. Nguyên tắc chung
+          </li>
           <li>
             CÔNG TY CỔ PHẦN ALLY AI với Mã số doanh nghiệp số: 0402251123, đăng
             ký lần đầu ngày 09/10/2024 do Phòng Đăng ký kinh doanh - Sở Kế hoạch
@@ -89,7 +195,7 @@ const SupplierPolicyPage = (props: Props) => {
           <li>
             Ứng dụng cung cấp dịch vụ thương mại điện tử TripC do CÔNG TY CỔ
             PHẦN ALLY AI vận hành và phát triển. Đây là môi trường cung cấp dịch
-            vụ sàn giao dịch thươn gmại điện tử kết nối giữa Người cung cấp dịch
+            vụ sàn giao dịch thương mại điện tử kết nối giữa Người cung cấp dịch
             vụ du lịch bao gồm: vui chơi giải trí, lưu trú, tour du lịch, nhà
             hàng, làm đẹp, chăm sóc sức khỏe, di chuyển và Người sử dụng dịch vụ
             cónhu cầu sử dụng các dịch vụ này.
@@ -101,7 +207,7 @@ const SupplierPolicyPage = (props: Props) => {
             doanh, cấm quảng cáo theo quy định của pháp luật. Các thương nhân,
             tổ chức, cá nhân tham gia hoạt động cung cấp dịch vụ phải tuân thủ
             các quy định của Luật bảo vệ quyền lợi người tiêu dùng và tự chịu
-            trách nhiệm mọi vấn đềliên quan đến sản phẩm mà bên mình cung cấp.
+            trách nhiệm mọi vấn đề liên quan đến sản phẩm mà bên mình cung cấp.
           </li>
 
           <li>
@@ -119,7 +225,9 @@ const SupplierPolicyPage = (props: Props) => {
         </ul>
 
         <ul className="mt-4">
-          <li className="font-medium">II. Quy định chung</li>
+          <li className="font-medium" id="common-regulation">
+            II. Quy định chung
+          </li>
           <li>
             Sàn Giao dịch Thương mại Điện tử: Sàn giao dịch TMĐT TripC do CÔNG
             TY CỔ PHẦN ALLY AI phát triển với tên ứng dụng là TripC (sau đây gọi
@@ -149,7 +257,7 @@ const SupplierPolicyPage = (props: Props) => {
             định hiện hành của Việt Nam. Thành viên khi tham gia vào Sàn giao
             dịch TMĐT TripC phải tự tìm hiểu trách nhiệm pháp lý của mình đối
             với luật pháp hiện hành của Việt Nam và cam kết thực hiện đúng những
-            nội dung trong Quy chế của Sàn giao dịch TMDT TripC
+            nội dung trong Quy chế của Sàn giao dịch TMDT TripC.
           </li>
 
           <li>
@@ -163,7 +271,7 @@ const SupplierPolicyPage = (props: Props) => {
 
         <ul className="mt-4">
           <li className="font-medium">III. Quy trình giao dịch</li>
-          <li className="font-medium">
+          <li className="font-medium" id="service-user">
             1. Quy trình dành cho Người sử dụng dịch vụ:
           </li>
           <li>
@@ -188,6 +296,13 @@ const SupplierPolicyPage = (props: Props) => {
               Bước 4: Điền các thông tin theo biểu mẫu có sẵn để đăng ký tài
               khoản
             </li>
+            <div className="flex justify-center">
+              <img
+                src="https://d3strovqzyyr8u.cloudfront.net/images/13703af4-53c2-451c-b245-41680fd1cec8/register.png"
+                alt=""
+                className="object-contain h-60 my-2"
+              />
+            </div>
           </ul>
 
           <ul>
@@ -206,32 +321,92 @@ const SupplierPolicyPage = (props: Props) => {
             <li>
               <span className="font-medium">Bước 1</span>: Xem danh mục dịch vụ
               cung cấp trên ứng dụng TripC
+              <div className="flex justify-center">
+                <img
+                  src="https://d3strovqzyyr8u.cloudfront.net/images/631d63d0-e3ef-4442-a7c0-61de2a5f87e1/category.png"
+                  alt=""
+                  className="object-contain h-60 my-2"
+                />
+              </div>
             </li>
 
             <li>
               <span className="font-medium">Bước 2</span>: Tìm kiếm dịch vụ phù
               hợp
+              <div className="flex justify-center">
+                <img
+                  src="https://d3strovqzyyr8u.cloudfront.net/images/f5bca212-06a4-4d0e-8b51-07482ac7da27/suitable-service-1.png"
+                  alt=""
+                  className="object-contain h-60 my-2"
+                />
+              </div>
+              <div className="flex justify-center">
+                <img
+                  src="https://d3strovqzyyr8u.cloudfront.net/images/3fbc2213-b2b5-4107-bb10-5db35b1a5afa/suitable-service-2.png"
+                  alt=""
+                  className="object-contain h-60 my-2"
+                />
+              </div>
             </li>
 
             <li>
               <span className="font-medium">Bước 3</span>: Nhấn chọn vào dịch vụ
               muốn xem chi tiết &gt;&gt; thao tác “Chọn” / “Đặt ngay” để tiến
               hành đặt dịch vụ
+              <div className="flex justify-center">
+                {" "}
+                <img
+                  src="https://d3strovqzyyr8u.cloudfront.net/images/aa86cb0d-bf41-4956-987a-39a58cc30ef4/detail-service.png"
+                  alt=""
+                  className="object-contain h-60 my-2"
+                />
+              </div>
+              <div className="flex justify-center">
+                <img
+                  src="https://d3strovqzyyr8u.cloudfront.net/images/bcb68e1b-0219-4b63-8367-a2aab43c1542/detail-service-2.png"
+                  alt=""
+                  className="object-contain h-60 my-2"
+                />
+              </div>
             </li>
-            <li>Người dùng chọn khung giờ, ngày cho tour du lịch của mình</li>
-            <li>Điền các thông tin theo form yêu cầu để tiến hành đặt tour</li>
+            <li>- Người dùng chọn khung giờ, ngày cho tour du lịch của mình</li>
+            <li>
+              - Điền các thông tin theo form yêu cầu để tiến hành đặt tour
+            </li>
 
-            <li className="italic">Đối với dịch vụ có thanh toán:</li>
+            <li className="italic">
+              - Đối với dịch vụ có thanh toán:
+              <div className="flex justify-center">
+                <img
+                  className="object-contain h-60 my-2"
+                  src="https://d3strovqzyyr8u.cloudfront.net/images/c0ee8fd9-71b1-472d-89ca-e2188e751f20/payment-service.png"
+                />
+              </div>
+            </li>
 
-            <li className="italic">Đối với dịch vụ Đặt chỗ không cần cọc:</li>
+            <li className="italic">
+              - Đối với dịch vụ Đặt chỗ không cần cọc:
+              <div className="flex justify-center">
+                <img
+                  className="object-contain h-60 my-2"
+                  src="https://d3strovqzyyr8u.cloudfront.net/images/963a2bf9-5923-4d2d-9dcb-8bf3dc3c4028/payment-reservation.png"
+                />
+              </div>
+            </li>
 
             <li>
               <span className="italic">*Đối với dịch vụ Lưu trú:</span> Khách
               hàng điền ngày check in – check out, TripC sẽ đề xuất cho khách
               hàng các đơn vị liên kết và thông tin giá của các đơn vị liên kết.
-              Khách hàng chọn biểu tượng mũi tên “-&gt;” ệ thống sẽ điều hướng
+              Khách hàng chọn biểu tượng mũi tên “-&gt;” hệ thống sẽ điều hướng
               sang website của đơn vị liên kết để Khách hàng tiến hành đặt dịch
               vụ.
+              <div className="flex justify-center">
+                <img
+                  className="object-contain h-96 my-2 "
+                  src="https://d3strovqzyyr8u.cloudfront.net/images/a00340f8-be8a-4989-b304-fdeac566dc2a/payment-accomodation.png"
+                />
+              </div>
             </li>
 
             <li>
@@ -243,18 +418,37 @@ const SupplierPolicyPage = (props: Props) => {
             <li>
               *Đối với dịch vụ cần thanh toán, chọn phương thức thanh toán phù
               hợp để đặt dịch vụ
+              <div className="flex justify-center">
+                <img
+                  className="object-contain h-96 my-2"
+                  src="https://d3strovqzyyr8u.cloudfront.net/images/a00340f8-be8a-4989-b304-fdeac566dc2a/payment-accomodation.png"
+                />
+              </div>
             </li>
             <li>
               Thông tin đặt tour sẽ được gửi về cho Sàn và Nhà cung cấp và xác
               nhận trên hệ thống
+              <div className="flex justify-center">
+                <img
+                  className="object-contain h-96 my-2"
+                  src="https://d3strovqzyyr8u.cloudfront.net/images/5764665e-18e4-4836-ad75-5284e882c31b/method-payment-success.png"
+                />
+              </div>
             </li>
 
-            <li className="font-medium">❖Quản lý thông tin đặt tour </li>
+            <li className="font-medium">❖Quản lý thông tin đặt tour</li>
 
             <ul>
               <li>
-                <span className="font-medium">Bước 1</span>Tại giao diện TripC,
-                chọn “Tài khoản” &gt;&gt; chọn “Tour đã đặt”
+                <span className="font-medium">Bước 1:</span> Tại giao diện
+                TripC, chọn “Tài khoản” &gt;&gt; chọn “Tour đã đặt”
+                <div className="flex justify-center">
+                  <img
+                    src="https://d3strovqzyyr8u.cloudfront.net/images/b2750696-e7b2-460f-abac-d66d943f388c/infomation-tour.png"
+                    alt=""
+                    className="object-contain h-96 my-2"
+                  />
+                </div>
               </li>
 
               <li>
@@ -280,11 +474,18 @@ const SupplierPolicyPage = (props: Props) => {
                 sẽ có một mức chi tiêu cụ thể mà người dùng phải đạt được để
                 thăng hạng. Mỗi hạng thành viên sẽ có các chương trình ưu đãi
                 khác nhau: tặng e-voucher, mã khuyến mãi...
+                <div className="flex justify-center">
+                  <img
+                    src="https://d3strovqzyyr8u.cloudfront.net/images/29fa6198-7b71-4a41-82bc-39b15b686b49/rank-member.png"
+                    alt=""
+                    className="object-contain h-60 my-2"
+                  />
+                </div>
               </li>
             </ul>
 
             <ul>
-              <li className="font-medium">
+              <li className="font-medium" id="service-supplier">
                 2. Quy trình dành cho Người cung cấp dịch vụ
               </li>
               <li className="font-medium">
@@ -294,8 +495,15 @@ const SupplierPolicyPage = (props: Props) => {
               <li>
                 <span className="font-medium">Bước 1: </span>Liên hệ để được tư
                 vấn và trở thành Nhà cung cấp trên ứng dụng TripC qua email
-                <span className="text-blue-500">cs@tripc.ai</span> hoặc số điện
+                <span className="text-blue-500"> cs@tripc.ai</span> hoặc số điện
                 thoại: 0935479122
+                <div className="flex justify-center">
+                  <img
+                    src="https://d3strovqzyyr8u.cloudfront.net/images/4b364fe3-4ceb-4731-acff-4b106fdb8e89/contact-tripc.png"
+                    alt=""
+                    className="object-contain h-96 my-2 "
+                  />
+                </div>
               </li>
 
               <li>
@@ -332,21 +540,31 @@ const SupplierPolicyPage = (props: Props) => {
 
               <li>
                 <span className="font-medium">Bước 3: </span> Sau khi nhận được
-                đầy đủ các giấy tờ pháp lý cần thiết từ Người cung cấp dịch
-                vụ,Phòng ban chuyên môn sẽ chịu trách nhiệm kiểm tra, tiến hành
-                quy trình rà soát trước khi quyết định giao kết hợp đồng cung
-                cấp dịch vụ TMĐT với Người cung cấp dịch vụ. Cụ thể:để kiểm tra
+                đầy đủ các giấy tờ pháp lý cần thiết từ Người cung cấp dịch vụ,
+                Phòng ban chuyên môn sẽ chịu trách nhiệm kiểm tra, tiến hành quy
+                trình rà soát trước khi quyết định giao kết hợp đồng cung cấp
+                dịch vụ TMĐT với Người cung cấp dịch vụ. Cụ thể: để kiểm tra
                 được tính chính xác về các giấy tờ hồ sơ của các đơn vị nhà cung
                 cấp, phòng ban chuyên môn của Boki.vn sẽ đối chiếu dữ liệu trên
                 Cổng thông tin quốc gia về đăng ký doanh nghiệp và tra cứu trên
                 ứng dụng của tổng cục thuế, tên miền
-                <a href="https://tracuunnt.gdt.gov.vn/">
+                <a
+                  href="https://tracuunnt.gdt.gov.vn/"
+                  className="mx-1 text-blue-500"
+                >
                   https://tracuunnt.gdt.gov.vn/
                 </a>
                 với thông tin mà đối tác cung cấp. Nếu trong trường hợp thông
                 tin cung cấp không chính xác hoặc có sai lệch, TripC sẽ tiến
                 hành liên hệ và xác minh lại thông tin với nhà cung cấp trước
                 khi cấp phép trở thành người bán.
+                <div className="flex justify-center">
+                  <img
+                    src="https://d3strovqzyyr8u.cloudfront.net/images/3ce69205-4c9d-45d2-8d41-605df35b4969/tax-vn.png"
+                    alt=""
+                    className="object-contain h-60 my-2 "
+                  />
+                </div>
               </li>
 
               <li>
@@ -361,7 +579,7 @@ const SupplierPolicyPage = (props: Props) => {
             </ul>
 
             <ul>
-              <li className="font-medium">
+              <li className="font-medium" id="delivery-method">
                 3. Phương thức vận chuyển giao nhận (Phương thức cung cấp dịch
                 vụ):
               </li>
@@ -378,7 +596,7 @@ const SupplierPolicyPage = (props: Props) => {
             </ul>
 
             <ul>
-              <li className="font-medium">
+              <li className="font-medium" id="delivery-refund">
                 4. Chính sách đổi trả/hủy và hoàn tiền
               </li>
 
@@ -458,7 +676,9 @@ const SupplierPolicyPage = (props: Props) => {
             </ul>
 
             <ul>
-              <li className="font-medium">5. Chính sách kiểm hàng </li>
+              <li className="font-medium" id="delivery-handle">
+                5. Chính sách kiểm hàng{" "}
+              </li>
               <li>
                 TripC là Ứng dụng cung cấp dịch vụ du lịch. Vì vậy, TripC không
                 có chính sách kiểm hàng.
@@ -466,7 +686,9 @@ const SupplierPolicyPage = (props: Props) => {
             </ul>
 
             <ul>
-              <li className="font-medium">6. Chính sách bảo hành</li>
+              <li className="font-medium" id="delivery-warranty">
+                6. Chính sách bảo hành
+              </li>
               <li>
                 TripC là Ứng dụng cung cấp dịch vụ du lịch. Vì vậy, TripC không
                 có chính sách bảo hành.
@@ -474,7 +696,7 @@ const SupplierPolicyPage = (props: Props) => {
             </ul>
 
             <ul>
-              <li className="font-medium">
+              <li className="font-medium" id="delivery-complaint">
                 7. Quy trình giải quyết tranh chấp, khiếu nại:
               </li>
 
@@ -483,12 +705,12 @@ const SupplierPolicyPage = (props: Props) => {
                 pháp thương lượng, hòa giải giữa các bên để đạt được sự đồng
                 thuận về phương án giải quyết. Nếu hai bên không thể thương
                 lượng với nhau và yêu cầu TripC đứng ra giải quyết vụ việc. Khi
-                đó, quyết định của TripC là quyết định cuối cùng. 
+                đó, quyết định của TripC là quyết định cuối cùng.
               </li>
 
               <ul>
                 <li className="font-medium">
-                  Đầu mối tiếp nhận giải quyết tranh chấp: 
+                  Đầu mối tiếp nhận giải quyết tranh chấp:
                 </li>
 
                 <li>CÔNG TY CỔ PHẦN ALLY AI VIỆT NAM </li>
@@ -539,7 +761,7 @@ const SupplierPolicyPage = (props: Props) => {
                   <ul>
                     <li className="font-medium">
                       + Đối với trường hợp phát sinh tranh chấp giữa Nhà cung
-                      cấp với Người mua: 
+                      cấp với Người mua:
                     </li>
 
                     <li>
@@ -634,11 +856,13 @@ const SupplierPolicyPage = (props: Props) => {
         </ul>
 
         <ul className="mt-4">
-          <li className="text-lg font-medium">IV. Quy trình thanh toán</li>
+          <li className="text-lg font-medium" id="payment-procedure">
+            IV. Quy trình thanh toán
+          </li>
 
           <ul>
             <li className="font-medium">
-              <span className="text-blue-500">4.1</span>
+              <span className="">4.1 </span>
               Thanh toán giữa Người sử dụng dịch vụ - Người cung cấp dịch vụ
             </li>
 
@@ -708,7 +932,9 @@ const SupplierPolicyPage = (props: Props) => {
         </ul>
 
         <ul className="mt-4">
-          <li className="text-lg font-medium">V. Đảm bảo an toàn giao dịch</li>
+          <li className="text-lg font-medium" id="secure-transactions">
+            V. Đảm bảo an toàn giao dịch
+          </li>
 
           <ul>
             <li>
@@ -744,7 +970,7 @@ const SupplierPolicyPage = (props: Props) => {
         </ul>
 
         <ul className="mt-4">
-          <li className="text-lg font-medium">
+          <li className="text-lg font-medium" id="technical-responsibility">
             VI. Trách nhiệm trong trường hợp phát sinh sự cố kỹ thuật
           </li>
 
@@ -776,7 +1002,7 @@ const SupplierPolicyPage = (props: Props) => {
         </ul>
 
         <ul className="mt-4">
-          <li className="text-lg font-medium">
+          <li className="text-lg font-medium" id="personal-infor-policy">
             VII. Chính sách Bảo vệ thông tin cá nhân của người tiêu dùng
           </li>
 
@@ -833,12 +1059,16 @@ const SupplierPolicyPage = (props: Props) => {
               <li>+ Phạm vi thu thập: </li>
 
               <li>
-                <span className="italic underline">Đối với Người bán:</span>
+                <span className="italic underline mr-1">
+                  Đối với Người bán:
+                </span>
                 TripC thu thập các thông tin về: Địa chỉ email, mật khẩu, họ
                 tên, số điện thoại, mã số thuế/ngày cấp/nơi cấp.
               </li>
               <li>
-                <span className="italic underline">Đối với Người mua:</span>
+                <span className="italic underline mr-1">
+                  Đối với Người mua:
+                </span>
                 TripC thu thập các thông tin sau: Họ và tên; địa chỉ; số điện
                 thoại; email.
               </li>
@@ -855,7 +1085,7 @@ const SupplierPolicyPage = (props: Props) => {
 
             <li>
               + Hỗ trợ Khách hàng giải đáp mọi thắc mắc, băn khoăn liên quan đến
-              các sản phẩm/dịch vụ mà Khách hàng quan tâm; 
+              các sản phẩm/dịch vụ mà Khách hàng quan tâm;
             </li>
 
             <li>
@@ -970,14 +1200,14 @@ const SupplierPolicyPage = (props: Props) => {
           <ul>
             <li className="font-medium">
               - Phương tiện và công cụ để người dùng tiếp cận và chỉnh sửa dữ
-              liệu cá nhân của mình: 
+              liệu cá nhân của mình:
             </li>
 
             <li>
               Người dùng có quyền tiếp cận để tự kiểm tra, cập nhật, chỉnh sửa
               hoặc hủy bỏ các dữ liệu cá nhân của mình bằng cách đăng nhập vào
               tài khoản của mình trên TripC và chỉnh sửa thông tin cá nhân, hoặc
-              người dùng có thể yêu cầu TripC hỗ trợ thực hiện việc này. 
+              người dùng có thể yêu cầu TripC hỗ trợ thực hiện việc này.
             </li>
 
             <li>
@@ -1201,7 +1431,7 @@ const SupplierPolicyPage = (props: Props) => {
         </ul>
 
         <ul className="mt-4">
-          <li className="text-lg font-medium">
+          <li className="text-lg font-medium" id="app-management">
             VIII. Quản lý thông tin trên Ứng dụng
           </li>
 
@@ -1226,6 +1456,13 @@ const SupplierPolicyPage = (props: Props) => {
                 <span className="font-medium">+ Bước 1:</span> Liên hệ để được
                 tư vấn và trở thành Nhà cung cấp trên ứng dụng TripC qua email
                 cs@tripc.ai hoặc số điện thoại: 0935479122
+                <div className="flex justify-center">
+                  <img
+                    src="https://d3strovqzyyr8u.cloudfront.net/images/4b364fe3-4ceb-4731-acff-4b106fdb8e89/contact-tripc.png"
+                    alt=""
+                    className="object-contain h-96 my-2 "
+                  />
+                </div>
               </li>
 
               <li>
@@ -1276,6 +1513,13 @@ const SupplierPolicyPage = (props: Props) => {
                 tin cung cấp không chính xác hoặc có sai lệch, TripC sẽ tiến
                 hành liên hệ và xác minh lại thông tin với nhà cung cấp trước
                 khi cấp phép trở thành người bán.
+                <div className="flex justify-center">
+                  <img
+                    src="https://d3strovqzyyr8u.cloudfront.net/images/3ce69205-4c9d-45d2-8d41-605df35b4969/tax-vn.png"
+                    alt=""
+                    className="object-contain h-60 my-2 "
+                  />
+                </div>
               </li>
 
               <li>
@@ -1297,8 +1541,10 @@ const SupplierPolicyPage = (props: Props) => {
             </li>
 
             <ul>
-              <li className="font-medium italic">
-                - Quy định kiểm soát thông tin dịch vụ đăng tải trên Ứng dụng:
+              <li className="">
+                <span className="font-medium italic">
+                  - Quy định kiểm soát thông tin dịch vụ đăng tải trên Ứng dụng:
+                </span>
                 <ul>
                   <li>
                     + Sau khi Nhà cung cấp đăng ký thông tin qua và gửi email
@@ -1545,7 +1791,1060 @@ const SupplierPolicyPage = (props: Props) => {
                 pháp luật Việt Nam hoặc từ phản ánh của cộng đồng.
               </li>
             </ul>
+
+            <ul>
+              <li className="font-medium">
+                - Cơ chế rà soát, kiểm soát thông tin về đăng tin hàng hóa, dịch
+                vụ của Ban quản lý Ứng dụng đối với việc đăng tin, quảng
+                cáo/dịch vụ đăng tải trên Ứng dụng
+              </li>
+
+              <li>
+                Bước 1: Người cung cấp dịch vụ cung cấp đầy đủ các thông tin:
+                <ul>
+                  <li>
+                    + Đối với dịch vụ Tour & Trải nghiệm: Tên dịch vụ, địa điểm
+                    cung cấp dịch vụ, ngày hiển thị, thời gian hiển thị, địa
+                    điểm xuất phát, địa điểm đưa đón, thông tin lịch trình, điều
+                    kiện đăng ký, giá dịch vụ, hình ảnh, các thông tin khác:
+                    hoàn hủy đổi trả…
+                  </li>
+
+                  <li>
+                    + Đối với dịch vụ Vui chơi: Tên dịch vụ, thời gian chuẩn bị,
+                    ngày hiển thị, thời gian hiển thị, địa điểm xuất phát, địa
+                    điểm đưa đón, thông tin lịch trình, điều kiện đăng ký, giá
+                    dịch vụ, hình ảnh, các thông tin khác: hoàn hủy đổi trả…
+                  </li>
+
+                  <li>
+                    + Đối với dịch vụ Đặt chỗ: Tên dịch vụ, thời gian chuẩn bị,
+                    ngày hiển thị, sức chứa, hạng vé, giá vé, các thông tin lưu
+                    ý…
+                  </li>
+
+                  <li>
+                    + Đối với dịch vụ Di chuyển: Tên dịch vụ, địa điểm cung cấp
+                    dịch vụ, ngày hiển thị, thời gian hiển thị, địa điểm xuất
+                    phát, địa điểm đưa đón, thông tin lịch trình, điều kiện đăng
+                    ký, giá dịch vụ, hình ảnh, các thông tin khác: hoàn hủy đổi
+                    trả…
+                  </li>
+
+                  <li>
+                    + Đối với dịch vụ ăn uống: Tên món, Mô tả, Hình ảnh, thông
+                    tin chi tiết, điều kiện áp dụng, giá cả, các thông tin khác…
+                  </li>
+
+                  <li>
+                    + Đối với dịch vụ sức khỏe & làm đẹp: Tên dịch vụ, Mô tả,
+                    Hình ảnh, thông tin chi tiết, điều kiện áp dụng, giá cả, các
+                    thông tin khác…
+                  </li>
+
+                  <li>
+                    + Đối với dịch vụ Giải trí: Tên dịch vụ, Mô tả, Hình ảnh,
+                    thông tin chi tiết, điều kiện áp dụng, giá cả, các thông tin
+                    khác…
+                  </li>
+                  <li>
+                    Khách hàng gửi thông tin trực tiếp về email cs@tripc.ai
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                Bước 2: Các thông tin Người cung cấp dịch vụ cung cấp sẽ được
+                Ban quản lý ứng dụng TripC kiểm duyệt nội dung trước khi chính
+                thức đăng tải trên ứng dụng. Việc kiểm soát và xét duyệt được
+                diễn ra trong vòng 24h kể từ khi Người cung cấp dịch vụ gửi
+                thông tin. Ban quản lý ứng dụng chỉ cho phép các tin đăng đạt
+                tiêu chuẩn theo quy định được hiển thị.
+              </li>
+
+              <li>
+                Bước 3: Nếu các hình ảnh, nội dung, thông tin dịch vụ không vi
+                phạm các quy định chung, không vi phạm từ khóa, tiêu chí đăng
+                thông tin dịch vụ của TripC và không vi phạm các quy định của
+                pháp luật, bộ phận quản lý nội dung của TripC sẽ chấp nhận duyệt
+                và xuất thông tin dịch vụ. Khi đó, dịch vụ sẽ được đăng tải
+                chính thức lên ứng dụng TripC.
+              </li>
+
+              <li>
+                Nếu các nội dung và thông tin về dịch vụ vi phạm các quy định
+                chung của TripC và/hoặc vi phạm các quy định của pháp luật, Ban
+                quản lý sẽ yêu cầu Người cung cấp dịch vụ chỉnh sửa lại các nội
+                dung thông tin đó và gửi cho Ban quản lý để kiểm duyệt lại.
+              </li>
+
+              <li>
+                Nếu sau khi gửi lại mà thông tin vẫn vi phạm các quy định chung
+                của TripC và/hoặc vi phạm các quy định của pháp luật, Ban quản
+                lý ứng dụng TripC có toàn quyền loại bỏ nội dung đó và không
+                đăng tải lên ứng dụng, đồng thời gửi thông báo tới Người cung
+                cấp dịch vụ.
+              </li>
+
+              <li>
+                Ban quản lý ứng dụng TripC giữ toàn quyền quyết định về việc lưu
+                giữ hay loại bỏ tin đã đăng trên sàn giao dịch TMĐT này mà không
+                cần báo trước.
+              </li>
+
+              <li className="font-medium">
+                - Quy trình phối hợp với các chủ thể quyền sở hữu trí tuệ rà
+                soát và gỡ bỏ các sản phẩm xâm phạm quyền sở hữu trí tuệ trên
+                Ứng dụng:
+              </li>
+            </ul>
           </ul>
+
+          <ul>
+            <li>
+              Ứng dụng cung cấp dịch vụ thương mại điện tử TripC luôn đề cao
+              quyền sở hữu trí tuệ của mọi cá nhân, tổ chức, doanh nghiệp. Do
+              vậy, khi nhận thấy bất kỳ thông tin dịch vụ nào có dấu hiệu xâm
+              phạm quyền sở hữu trí tuệ, chủ thể quyền sở hữu trí tuệ có thể gửi
+              yêu cầu và thực hiện theo các thủ tục cần thiết dưới đây để bảo vệ
+              các quyền sở hữu trí tuệ của mình trên Ứng dụng TripC:
+            </li>
+
+            <li className="italic">
+              (1) Các đối tượng bảo hộ quyền sở hữu trí tuệ được chấp thuận xử
+              lý trên Ứng dụng TripC:
+            </li>
+
+            <li>
+              - TripC chỉ tiếp nhận và xử lý các yêu cầu bảo vệ quyền sở hữu trí
+              tuệ của các chủ thể liên quan đến tin đăng bị nghi ngờ xâm phạm:
+              Quyền tác giá và quyền liên quan; một số đối tượng quyền sở hữu
+              công nghiệp gồm: sáng chế, kiểu dáng công nghiệp, nhãn hiệu và tên
+              thương mại theo quy định của Luật sở hữu trí tuệ hiện hành.
+            </li>
+
+            <li className="italic">
+              (2) Các hành vi bị coi là xâm phạm quyền sở hữu trí tuệ trên Ứng
+              dụng TripC:
+            </li>
+
+            <li>
+              - Đăng dịch vụ lưu trú phòng, khách sạn.... có chứa thông tin,
+              hình ảnh, nội dung sao chép (toàn bộ hoặc một phần) tác phẩm đang
+              được bảo hộ của Chủ thể quyền mà không có sự cho phép của Chủ thể
+              quyền hoặc người được cấp quyền sử dụng hợp pháp tác phẩm tại Việt
+              Nam, ví dụ như sử dụng nội dung mô tả thông tin dịch vụ, hình ảnh
+              minh họa, video minh họa sao chép hình ảnh, video của chủ thể
+              quyền.
+            </li>
+
+            <li>
+              - Đặt tên Shop, hình ảnh đại diện của Shop có chứa thông tin, hình
+              ảnh sao chép (toàn bộ hoặc một phần) tác phẩm đang được bảo hộ của
+              Chủ thể quyền mà không có sự cho phép của Chủ thể quyền
+            </li>
+
+            <li>
+              - Nội dung đăng bán có chứa thông tin, hình ảnh, video trùng hoặc
+              tương tự đến mức gây nhầm lẫn, không có sự khác biệt đáng kể với
+              các đối tượng quyền sở hữu công nghiệp (gồm: nhãn hiệu, sáng chế,
+              tên thương mại, kiểu dáng công nghiệp) của Chủ thể quyền hoặc
+              người được cấp quyền sử dụng các đối tượng này mà không có sự cho
+              phép của họ.- Nội dung đăng bán có chứa thông tin, hình ảnh, video
+              trùng hoặc tương tự đến mức gây nhầm lẫn, không có sự khác biệt
+              đáng kể với các đối tượng quyền sở hữu công nghiệp (gồm: nhãn
+              hiệu, sáng chế, tên thương mại, kiểu dáng công nghiệp) của Chủ thể
+              quyền hoặc người được cấp quyền sử dụng các đối tượng này mà không
+              có sự cho phép của họ.
+            </li>
+
+            <li className="italic">
+              (3) Tư cách chủ thể có quyền khiếu nại yêu cầu xử lý việc xâm phạm
+              quyền sở hữu trí tuệ trên Ứng dụng TripC:
+            </li>
+
+            <li>
+              - Chủ sở hữu hợp pháp quyền sở hữu trí tuệ theo quy định của Luật
+              Sở hữu trí tuệ hiện hành;
+            </li>
+
+            <li>
+              - Người được chủ sở hữu hợp pháp quyền sở hữu trí tuệ cấp quyền sử
+              dụng theo quy định của Luật sở hữu trí tuệ;
+            </li>
+
+            <li>
+              - Người đại diện hợp pháp của hai chủ thể nêu trên theo đúng quy
+              định về cơ chế đại diện (theo pháp luật hoặc theo ủy quyền).
+            </li>
+
+            <li className="italic">
+              (4) Tài liệu chứng minh được coi là hợp lệ khi chủ thể quyền gửi
+              khiếu nại về hành vi bị nghi ngờ xâm phạm quyền sở hữu trí tuệ:
+            </li>
+
+            <li>
+              - Văn bản ủy quyền (trong trường hợp người khiếu nại không phải là
+              Chủ sở hữu).
+            </li>
+
+            <li>
+              - Giấy chứng nhận đăng ký bảo hộ nhãn hiệu (đối với khiếu nại về
+              hành vi xâm phạm nhãn hiệu); hoặc Giấy chứng nhận đăng ký bảo hộ
+              kiểu dáng công nghiệp/ sáng chế (đối với khiếu nại về hành vi xâm
+              phạm kiểu dáng công nghiệp/ sáng chế); hoặc Giấy chứng nhận đăng
+              ký quyền tác giả, quyền liên quan (đối với hành vi xâm phạm bản
+              quyền).
+            </li>
+
+            <li>- Đường link thông tin dịch vụ khiếu nại.</li>
+
+            <li>- Tên tài khoản Người cung cấp dịch vụ bị khiếu nại.</li>
+
+            <li>
+              - Bản sao giấy chứng nhận đăng ký doanh nghiệp (trường hợp bên
+              khiếu nại là Tổ chức) hoặc bản chụp hai mặt chứng minh nhân dân/
+              căn cước công dân (trường hợp bên khiếu nại là cá nhân).
+            </li>
+
+            <li>
+              - Bằng chứng chứng minh khác về hành vi vi phạm, gồm: Kết quả giám
+              định sở hữu trí tuệ do cơ quan, tổ chức đủ điều kiện cấp và/hoặc
+              hình ảnh, tài liệu phân tích.
+            </li>
+
+            <li className="italic">
+              (5) Quy trình tiếp nhận và xử lý khiếu nại về hành vi bị nghi ngờ
+              xâm phạm quyền sở hữu trí trệ trên Ứng dụng TripC:
+            </li>
+
+            <li>
+              - Bước 1: Chủ thể có quyền khiếu nại gửi yêu cầu và tài liệu chứng
+              minh quy định tại mục (4) về cho Ban quản trị Ứng dụng TripC qua
+              email: Cs@tripc.ai.
+            </li>
+
+            <li>
+              - Bước 2: Sau khi nhận được phản hồi của người dùng về vấn đề vi
+              phạm, chúng tôi, trong vòng 03 giờ làm việc, sẽ liên hệ lại với
+              người dùng để xác minh thông tin
+            </li>
+
+            <li>
+              - Bước 3: Trong thời hạn 07 – 10 ngày làm việc kể từ ngày nhận
+              được yêu cầu của Chủ thể quyền và nếu Chủ thể quyền cung cấp đầy
+              đủ thông tin, tài liệu chứng minh hành vi xâm phạm quyền của Bên
+              bị khiếu nại, chúng tôi sẽ thực hiện các biện pháp xử lý hành vi
+              vi phạm của Bên bị khiếu nại. Cụ thể:
+            </li>
+
+            <li>
+              + Thông báo trước với Người cung cấp dịch vụ (bên có hành vi vi
+              phạm) về việc gỡ bỏ tin đăng liên quan.
+            </li>
+
+            <li>
+              + Tài khoản của Người cung cấp dịch vụ cũng sẽ bị cảnh báo lần 1,
+              bị khóa tạm thời trong vòng 15 ngày và Người cung cấp dịch vụ phải
+              thực hiện việc bồi thường thiệt hại cho CÔNG TY CỔ PHẦN ALLY AI
+              cũng như chủ thể quyền sở hữu trí tuệ (nếu hành vi xâm phạm quyền
+              sở hữu trí tuệ của Người cung cấp dịch vụ gây ra thiệt hại).{" "}
+            </li>
+
+            <li>
+              + Nếu hành vi xâm phạm quyền sở hữu trí tuệ tái diễn nhiều lần,
+              tài khoản của Người cung cấp dịch vụ trên TripC sẽ bị khóa vĩnh
+              viễn.
+            </li>
+          </ul>
+
+          <ul>
+            <li className="font-medium italic">Lưu ý: </li>
+
+            <li className="italic">
+              - Trong trường hợp Chủ thể quyền chưa cung cấp đầy đủ tài liệu như
+              được hướng dẫn tại mục (4), trong thời hạn 24 giờ làm việc kể từ
+              khi nhận được yêu cầu của Chủ thể quyền, ban quản trị Ứng dụng
+              TripC sẽ thông báo và yêu cầu Chủ thể quyền bổ sung thông tin, tài
+              liệu như đã hướng dẫn. Trong trường hợp bổ sung tài liệu không đầy
+              đủ hoặc bổ sung không đúng theo hướng dẫn, Ứng dụng TripC có quyền
+              tạm đình chỉ hoặc chấm dứt việc xử lý khiếu nại của chủ thể yêu
+              cầu.
+            </li>
+
+            <li className="italic">
+              - Trường hợp vụ việc có tính chất phức tạp, mức độ thiệt hại do
+              hành vi xâm phạm quyền sở hữu trí tuệ là đáng kể, Ứng dụng TripC
+              khuyến nghị chủ thể quyền đưa vụ tranh chấp ra giải quyết tại cơ
+              quan có thẩm quyền để đám bảo tối đa quyền lời chính đáng của họ.
+              Trong trường hợp đó, Ứng dụng TripC sẽ là bên trung gian, hỗ trợ
+              cung cấp thông tin và tài liệu theo yêu cầu của cơ quan chức năng
+              nhằm phục vụ cho công tác thẩm định và xử lý theo đúng quy định
+              pháp luật.
+            </li>
+
+            <ul>
+              <li className="font-medium italic"> Chế tài </li>
+              <li>
+                Trường hợp các tin đăng của Người cung cấp dịch vụ vi phạm các
+                quy định về kiểm soát thông tin dịch vụ, Ban quản lý của TripC
+                sẽ có chế tài xử lý như sau:
+              </li>
+
+              <li>
+                - Trường hợp các thông tin dịch vụ không phù hợp với chuyên mục
+                quy định, Ban quản lý sẽ gửi thông báo cho Người cung cấp dịch
+                vụ hoặc xóa tin đăng hoặc chuyển thông tin dịch vụ đó sang
+                chuyên mục khác phù hợp theo quy định của ứng dụng cung cấp dịch
+                vụ TMĐT TripC.
+              </li>
+
+              <li>
+                - Người cung cấp dịch vụ vi phạm các quy định về danh mục các
+                thông tin dịch vụ bị cấm kinh doanh hoặc/và cấm quảng cáo trên
+                TripC sẽ bị xóa tài khoản Người cung cấp dịch vụ và không được
+                đăng tin dịch vụ lưu trú trên TripC, đồng thời phải tự chịu
+                trách nhiệm pháp lý đối với các hành vi vi phạm pháp luật Việt
+                Nam hiện hành.
+              </li>
+
+              <li>
+                - Trường hợp Người cung cấp dịch vụ vi phạm quy chế hoạt động
+                của ứng dụng cung cấp dịch vụ TMĐT TripC dẫn đến thiệt hại cho
+                ứng dụng cung cấp dịch vụ TMĐT hoặc CÔNG TY CỔ PHẦN ALLY AI VIỆT
+                NAM, Ban quản lý ứng dụng cung cấp dịch vụ TMĐT sẽ yêu cầu Người
+                cung cấp dịch vụ bồi thường các thiệt hại theo các giấy tờ, căn
+                cứ chứng minh hợp lệ.
+              </li>
+            </ul>
+          </ul>
+        </ul>
+
+        <ul className="mt-4">
+          <li className="font-medium" id="permission-responsibility-app">
+            IX. Quyền và trách nhiệm của Ban quản lý Ứng dụng TripC
+          </li>
+
+          <ul>
+            <li className="font-medium" id="permission-app">
+              1. Quyền của Ban quản lý Ứng dụng TripC
+            </li>
+            <li>
+              - Ứng dụng cung cấp dịch vụ TMĐT TripC sẽ tiến hành cung cấp các
+              dịch vụ cho những thành viên tham gia sau khi đã hoàn thành các
+              thủ tục và các điều kiện bắt buộc mà Ứng dụng cung cấp dịch vụ
+              TMĐT TripC nêu ra.
+            </li>
+            <li>
+              - Lưu trữ thông tin đăng ký của thành viên và thường xuyên cập
+              nhật những thông tin thay đổi, bổ sung có liên quan.
+            </li>
+            <li>
+              - Ứng dụng cung cấp dịch vụ TMĐT TripC sẽ tiến hành xây dựng các
+              chính sách dịch vụ áp dụng cho từng đối tượng trên Ứng dụng. Các
+              chính sách này sẽ được công bố trên Ứng dụng cung cấp dịch vụ TMĐT
+              TripC.
+            </li>
+
+            <li>
+              - Trong trường hợp có cơ sở để chứng minh thành viên cung cấp
+              thông tin cho Ứng dụng cung cấp dịch vụ TMĐT TripC không chính
+              xác, sai lệch, không đầy đủ hoặc vi phạm pháp luật hay thuần phong
+              mỹ tục Việt Nam thì Ứng dụng cung cấp dịch vụ TMĐT TripC có quyền
+              từ chối, tạm ngừng hoặc chấm dứt quyền sử dụng dịch vụ của thành
+              viên.
+            </li>
+
+            <li>
+              - Ứng dụng cung cấp dịch vụ TMĐT TripC có thể chấm dứt ngay quyền
+              sử dụng dịch vụ của thành viên nếu Ứng dụng cung cấp dịch vụ TMĐT
+              TripC phát hiện thành viên bị kết án hoặc đang trong thời gian thụ
+              án, trong trường hợp thành viên tiếp tục hoạt động có thể gây cho
+              Ứng dụng cung cấp dịch vụ TMĐT TripC trách nhiệm pháp lý, có những
+              hoạt động lừa đảo, giả mạo, gây rối loạn thị trường, gây mất đoàn
+              kết đối với các thành viên khác của Ứng dụng cung cấp dịch vụ TMĐT
+              TripC, hoạt động vi phạm pháp luật hiện hành của Việt Nam.
+            </li>
+
+            <li>
+              - Ứng dụng cung cấp dịch vụ TMĐT TripC có quyền gỡ sản phẩm, chỉnh
+              sửa hoặc xóa nội dung thông tin về các sản phẩm đó nếu Ứng dụng
+              cung cấp dịch vụ TMĐT TripC phát hiện sản phẩm thuộc danh mục
+              cấm/hạn chế kinh doanh hoặc thành viên không xuất trình được giấy
+              phép kinh doanh đối với các sản phẩm kinh doanh có điều kiện.
+            </li>
+            <li>
+              - Trong trường hợp chấm dứt quyền thành viên và quyền sử dụng dịch
+              vụ trên Ứng dụng TripC thì tất cả các quyền của thành viên được
+              cấp sẽ mặc nhiên hết giá trị và bị chấm dứt, thông tin lưu trú đã
+              đăng tải của thành viên cũng sẽ bị gỡ xuống.
+            </li>
+
+            <li>
+              - Ứng dụng cung cấp dịch vụ TMĐT TripC giữ bản quyền sử dụng dịch
+              vụ và các nội dung trên Ứng dụng cung cấp dịch vụ TMĐT TripC theo
+              các quy định pháp luật về bảo hộ sở hữu trí tuệ tại Việt Nam. Tất
+              cả các biểu tượng, nội dung theo các ngôn ngữ khác nhau đều thuộc
+              quyền sở hữu của Ứng dụng cung cấp dịch vụ TMĐT TripC. Nghiêm cấm
+              mọi hành vi sao chép, sử dụng và phổ biến bất hợp pháp các quyền
+              sở hữu trên.
+            </li>
+            <li>
+              - Ứng dụng cung cấp dịch vụ TMĐT TripC giữ quyền được thay đổi
+              bảng giá dịch vụ và phương thức thanh toán trong thời gian cung
+              cấp dịch vụ cho thành viên (đối với Người cung cấp dịch vụ) theo
+              nhu cầu và điều kiện khả năng của Ứng dụng cung cấp dịch vụ TMĐT
+              TripC và sẽ báo trước cho các thành viên đó thời hạn là một (01)
+              tháng.
+            </li>
+          </ul>
+
+          <ul>
+            <li className="font-medium" id="responsibility-app">
+              2. Nghĩa vụ và trách nhiệm của Ban quản lý Ứng dụng TripC
+            </li>
+
+            <li>
+              - Thông báo với Bộ Công Thương về việc thiết lập Ứng dụng thương
+              mại điện tử đăng tin lưu trú.
+            </li>
+
+            <li>
+              - Thực hiện kiểm duyệt và đăng bài lưu trú cho Người cung cấp dịch
+              vụ lên sàn TMDT.
+            </li>
+
+            <li>
+              - Tuân thủ các quy định về bảo vệ thông tin cá nhân của khách
+              hàng.
+            </li>
+
+            <li>
+              - Đảm bảo an toàn, bảo mật giao dịch thanh toán của Người sử dụng
+              dịch vụ, xử lý khiếu nại và đền bù thiệt hại trong trường hợp
+              thông tin thanh toán của Người sử dụng dịch vụ qua Ứng dụng thương
+              mại điện tử bị thay đổi, xóa, hủy, sao chép, tiết lộ, di chuyển
+              trái phép hoặc bị chiếm đoạt gây thiệt hại cho Người sử dụng dịch
+              vụ.
+            </li>
+
+            <li>
+              - Cung cấp thông tin về tình hình kinh doanh của mình khi có yêu
+              cầu của cơ quan nhà nước có thẩm quyền để phục vụ hoạt động thống
+              kê thương mại điện tử, hoạt động thanh tra, kiểm tra và xử lý vi
+              phạm trong thương mại điện tử.
+            </li>
+
+            <li>
+              - Lưu trữ thông tin về các giao dịch được thực hiện qua Ứng dụng
+              theo quy định của pháp luật về kế toán; thực hiện đầy đủ nghĩa vụ
+              thuế theo quy định của pháp luật.
+            </li>
+
+            <li>
+              - Đăng ký thiết lập Ứng dụng cung cấp dịch vụ khuyến mại trực
+              tuyến với cơ quan nhà nước có thẩm quyền.{" "}
+            </li>
+
+            <li>
+              - Tuân thủ các quy định của Luật thương mại và các quy định pháp
+              luật có liên quan về hoạt động khuyến mại.
+            </li>
+
+            <li>
+              - Tuân thủ các quy định về bảo vệ thông tin cá nhân của người
+              dùng.
+            </li>
+
+            <li>
+              - Xây dựng và công bố trên Ứng dụng cơ chế tiếp nhận, giải quyết
+              các khiếu nại của khách hàng về thông tin Phòng khách sạn.
+            </li>
+
+            <li>
+              - Chịu trách nhiệm của bên thứ ba trong việc cung cấp thông tin
+              dịch vụ cho Người sử dụng dịch vụ theo quy định của Luật Phòng
+              khách sạn.
+            </li>
+
+            <li>
+              - Đăng ký Ứng dụng cung cấp dịch vụ thương mại điện tử với cơ quan
+              nhà nước có thẩm quyền.
+            </li>
+
+            <li>
+              - Xây dựng và công bố công khai Quy chế hoạt động, Quy định, Hướng
+              dẫn các quy trình giao dịch cho Thành viên; theo dõi và bảo đảm
+              việc thực hiện quy chế đó trên Ứng dụng cung cấp dịch vụ TMĐT
+              TripC.
+            </li>
+
+            <li>
+              - Công bố đầy đủ các thông tin về chủ sở hữu Ứng dụng lên trang
+              chủ Ứng dụng theo đúng quy định pháp luật. Thông tin của CÔNG TY
+              CỔ PHẦN ALLY AI được thể hiện trên trang chủ Ứng dụng như sau:
+              <ul>
+                <li>
+                  <span className="italic">Tên đơn vị:</span> CÔNG TY CỔ PHẦN
+                  ALLY AI
+                </li>
+                <li>
+                  <span className="italic">Mã số thuế:</span> 0402251123
+                </li>
+                <li>
+                  <span className="italic">Trụ sở chính: </span> 153 Đống Đa,
+                  Phường Thạch Thang, Quận Hải Châu, Thành phố Đà Nẵng
+                </li>
+                <li>
+                  <span className="italic">Số điện thoại:</span> 0935479122
+                </li>
+                <li>
+                  <span className="italic">Email:</span> cs@tripc.ai
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  - Hỗ trợ các thành viên để sử dụng được các công cụ, các tính
+                  năng phục vụ cho việc tiến hành giao dịch và sử dụng các dịch
+                  vụ tiện ích trên Ứng dụng cung cấp dịch vụ TMĐT TripC.
+                </li>
+                <li>
+                  - Tiếp nhận góp ý của thành viên cho Ứng dụng cung cấp dịch vụ
+                  TMĐT TripC trong quá trình hoạt động.
+                </li>
+                <li>
+                  - Ứng dụng cung cấp dịch vụ TMĐT TripC chịu trách nhiệm xây
+                  dựng Ứng dụng bao gồm một số công việc chính như: nghiên cứu,
+                  thiết kế, mua sắm các thiết bị phần cứng và phần mềm, kết nối
+                  Internet, xây dựng chính sách phục vụ cho hoạt động Ứng dụng
+                  cung cấp dịch vụ TMĐT TripC trong điều kiện và phạm vi cho
+                  phép.
+                </li>
+                <li>
+                  - Ứng dụng cung cấp dịch vụ TMĐT TripC có cơ chế kiểm tra,
+                  giám sát để đảm bảo việc cung cấp thông tin của thành viên
+                  trên Ứng dụng cung cấp dịch vụ TMĐT được thực hiện chính xác,
+                  đầy đủ.
+                </li>
+                <li>
+                  - Ứng dụng sẽ công bố công khai cơ chế giải quyết các tranh
+                  chấp phát sinh trong quá trình giao dịch trên Ứng dụng cung
+                  cấp dịch vụ TMĐT TripC. Khi Người sử dụng dịch vụ trên Ứng
+                  dụng cung cấp dịch vụ TMĐT phát sinh mâu thuẫn với Người cung
+                  cấp dịch vụ hoặc bị tổn hại lợi ích hợp pháp, TripC phải cung
+                  cấp cho Người sử dụng dịch vụ thông tin về Người cung cấp dịch
+                  vụ, tích cực hỗ trợ Người sử dụng dịch vụ bảo vệ quyền và lợi
+                  ích hợp pháp của mình.
+                </li>
+
+                <li>
+                  - Ban quản lý sẽ cố gắng đến mức cao nhất trong phạm vi và
+                  điều kiện có thể để duy trì hoạt động bình thường của Ứng dụng
+                  cung cấp dịch vụ TMĐT TripC và khắc phục các sự cố như: sự cố
+                  kỹ thuật về máy móc, lỗi phần mềm, hệ thống đường truyền
+                  internet, nhân sự, các biến động xã hội, thiên tai, mất điện,
+                  các quyết định của cơ quan nhà nước hay một tổ chức liên quan
+                  thứ ba. Tuy nhiên, nếu những sự cố trên xảy ra nằm ngoài khả
+                  năng kiểm soát, là những trường hợp bất khả kháng mà gây thiệt
+                  hại cho thành viên thì Ứng dụng cung cấp dịch vụ TMĐT TripC
+                  không phải chịu trách nhiệm liên đới.
+                </li>
+                <li>
+                  - Ban quản lý Ứng dụng cung cấp dịch vụ TMĐT TripC có trách
+                  nhiệm xử lý kịp thời khi phát hiện hoặc nhận được phản ánh về
+                  hành vi kinh doanh vi phạm pháp luật trên Ứng dụng cung cấp
+                  dịch vụ thương mại điện tử như sau: a) Ngăn chặn và loại bỏ
+                  khỏi Ứng dụng những thông tin mua đăng tin lưu trú hóa, cung
+                  ứng dịch vụ thuộc danh mục hàng hóa, dịch vụ cấm kinh doanh,
+                  thuộc ngành, nghề cấm đầu tư kinh doanh theo quy định của pháp
+                  luật; b) Gỡ bỏ thông tin về hàng hóa, dịch vụ vi phạm pháp
+                  luật trong vòng tối đa là 24 giờ kể từ khi nhận được yêu cầu
+                  của cơ quan quản lý nhà nước có thẩm quyền; c) Phối hợp với
+                  các chủ thể quyền sở hữu trí tuệ rà soát và gỡ bỏ các sản phẩm
+                  xâm phạm quyền sở hữu trí tuệ theo quy trình, thủ tục công bố
+                  tại Quy chế hoạt động của Ứng dụng cung cấp dịch vụ thương mại
+                  điện tử; d) Cảnh cáo hoặc từ chối cung cấp dịch vụ có thời hạn
+                  hoặc vĩnh viễn đối với những cá nhân, thương nhân, tổ chức có
+                  hành vi kinh doanh vi phạm pháp luật; đ) Các biện pháp khác
+                  theo Quy chế hoạt động của Ứng dụng cung cấp dịch vụ thương
+                  mại điện tử TripC.
+                </li>
+                <li>
+                  - Ứng dụng cung cấp dịch vụ TMĐT TripC có trách nhiệm hỗ trợ
+                  cơ quan quản lý nhà nước điều tra các hành vi kinh doanh vi
+                  phạm pháp luật, và giải quyết tranh chấp, khiếu nại: Cung cấp
+                  thông tin về đối tượng có dấu hiệu, hành vi vi phạm pháp luật
+                  trên Ứng dụng cung cấp dịch vụ thương mại điện tử cho cơ quan
+                  quản lý nhà nước có thẩm quyền khi phát hiện hoặc nhận được
+                  các thông tin nêu trên; Thường xuyên cập nhật từ khóa theo
+                  khuyến cáo từ cơ quan quản lý nhà nước có thẩm quyền và lọc
+                  thông tin theo từ khóa trước khi thông tin về hàng hóa, dịch
+                  vụ hiển thị trên Ứng dụng; Tiếp nhận, phản hồi thông tin để
+                  giải quyết khiếu nại, phản ánh và tranh chấp liên quan đến Ứng
+                  dụng cung cấp dịch vụ TMĐT tại Cổng thông tin Quản lý hoạt
+                  động thương mại điện tử của Bộ Công Thương tại địa chỉ
+                  online.gov.vn.
+                </li>
+                <li>
+                  - Ứng dụng cung cấp dịch vụ TMĐT TripC có trách nhiệm yêu cầu
+                  Người cung cấp dịch vụ phải cung cấp đầy đủ các thông tin,
+                  giấy tờ, giấy chứng nhận liên quan chứng minh đủ điều kiện
+                  kinh doanh hàng hóa thuộc danh mục kinh doanh có điều kiện khi
+                  đăng ký sử dụng dịch vụ Ứng dụng cung cấp dịch vụ TMĐT của
+                  TripC theo đúng quy định pháp luật Việt Nam.
+                </li>
+                <li>
+                  - Lưu trữ thông tin đăng ký của các thương nhân, tổ chức, cá
+                  nhân tham gia Ứng dụng cung cấp dịch vụ TMĐT TripC và thường
+                  xuyên cập nhật những thông tin thay đổi, bổ sung có liên quan.
+                </li>
+                <li>
+                  - Thiết lập cơ chế cho phép thương nhân, tổ chức, cá nhân tham
+                  gia Ứng dụng cung cấp dịch vụ TMĐT TripC thực hiện được quy
+                  trình giao kết hợp đồng trong quá trình đặt hàng trực tuyến
+                  trên Ứng dụng.
+                </li>
+                <li>
+                  - Áp dụng các biện pháp cần thiết để đảm bảo an toàn thông tin
+                  liên quan đến bí mật kinh doanh của thương nhân, tổ chức, cá
+                  nhân và thông tin cá nhân của người tiêu dùng.
+                </li>
+                <li></li>
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+        </ul>
+        <ul className="mt-4">
+          <li className="font-medium" id="permission-responsibility-app-supplier">
+            X. Quyền và trách nhiệm của Người cung cấp dịch vụ trên Ứng dụng
+            TripC
+          </li>
+
+          <ul>
+            <li className="font-medium" id="permission-app-supplier">
+              1. Quyền của Người cung cấp dịch vụ trên Ứng dụng TripC
+            </li>
+            <li>
+              - Khi đăng ký trở thành Người cung cấp dịch vụ của TripC và được
+              TripC chấp thuận, Người cung cấp dịch vụ sẽ được TripC hỗ trợ đăng
+              tải thông tin, đưa sản phẩm/dịch vụ lên TripC để tiếp cận khách
+              hàng tiềm năng, thông báo kịp thời cho Người cung cấp dịch vụ các
+              đơn hàng phát sinh trên TripC để người cung cấp dịch vụ xúc tiến
+              cung cấp dịch vụ cho khách hàng.
+            </li>
+            <li>
+              - Người cung cấp dịch vụ có quyền đóng góp ý kiến cho TripC trong
+              quá trình hoạt động. Các kiến nghị được gửi bằng thư điện tử đến
+              cho TripC.
+            </li>
+            <li>
+              Người cung cấp dịch vụ còn có các quyền được nêu trong các thỏa
+              thuận hợp tác, các hợp đồng liên quan, trong Đề án này và cũng như
+              các chính sách khác của TripC đã được đăng tải trên Ứng dụng TripC
+              của Công ty, cũng như theo quy định pháp luật áp dụng
+            </li>
+          </ul>
+
+          <ul>
+            <li className="font-medium" id="responsibility-app-supplier">
+              2. Nghĩa vụ và trách nhiệm của Người cung cấp dịch vụ trên Ứng
+              dụng TripC
+            </li>
+
+            <li>
+              - Người cung cấp dịch vụ có trách nhiệm cung cấp đầy đủ, chính xác
+              các thông tin cập nhật mới nhất được yêu cầu khi khởi tạo tài
+              khoản, hoặc trong quá trình sử dụng dịch vụ, bao gồm các thông tin
+              về Người cung cấp dịch vụ cũng như các thông tin về các dịch vụ mà
+              Người cung cấp dịch vụ cung cấp cho Người dùng, bao gồm nhưng
+              không giới hạn bởi các thông tin về dịch vụ, giá cả, điều kiện
+              giao dịch, phương thức thanh toán và các thông tin giao dịch khác.
+            </li>
+            <li>
+              - Người cung cấp dịch vụ có trách nhiệm cung cấp và báo cáo các
+              thông tin liên quan khi có yêu cầu của các cơ quan nhà nước phục
+              vụ cho các hoạt động thống kê thương mại điện tử. Người cung cấp
+              dịch vụ hoàn toàn chịu trách nhiệm về tính chính xác, trung thực
+              của các thông tin được yêu cầu này. Người cung cấp dịch vụ phải
+              nhanh chóng thông báo, cập nhật các thông tin liên quan.
+            </li>
+            <li>
+              - Người cung cấp dịch vụ có trách nhiệm cung cấp các thông tin,
+              tài liệu về dịch vụ của mình cũng như về giao dịch liên quan giữa
+              Người cung cấp dịch vụ và Người dùng và nghĩa vụ hợp tác, tuân thủ
+              các yêu cầu, quy định trong chính sách hỗ trợ giải quyết khiếu nại
+              và tranh chấp và phối hợp với TripC trong quá trình giải quyết các
+              tranh chấp, khiếu nại, khiếu kiện phát sinh giữa Người cung cấp
+              dịch vụ và Người dùng. Người cung cấp dịch vụ có nghĩa vụ và trách
+              nhiệm bồi thường các thiệt hại gây ra bởi Người cung cấp dịch vụ
+              và/hoặc nhân viên của mình.
+            </li>
+
+            <li>
+              - Người cung cấp dịch vụ có trách nhiệm và nghĩa vụ tuân thủ pháp
+              luật về thanh toán, quảng cáo, khuyến mại, bảo vệ quyền sở hữu trí
+              tuệ, bảo vệ quyền lợi người tiêu dùng và các quy định của pháp
+              luật có liên quan khác khi cung ứng dịch vụ trên Ứng dụng TripC.
+            </li>
+
+            <li>
+              - Người cung cấp dịch vụ có trách nhiệm và nghĩa vụ tuân thủ các
+              quy định của Đề án này, Điều Khoản Sử Dụng cũng như các chính
+              sách, quy định, quy chế, quy trình và hướng dẫn được TripC viện
+              dẫn trong Quy Chế hoạt động hoặc được TripC công bố hoặc áp dụng
+              vào từng thời điểm. Người cung cấp dịch vụ cam kết, đồng ý không
+              sử dụng dịch vụ cũng như Ứng dụng TripC vào những mục đích bất hợp
+              pháp, không hợp lý, lừa đảo, đe dọa, thăm dò thông tin bất hợp
+              pháp, phá hoại, tạo ra và phát tán virus gây hư hại hệ thống, cấu
+              hình, truyền tải thông tin của Ứng dụng TripC hay sử dụng dịch vụ
+              của mình vào mục đích đầu cơ, lũng đoạn thị trường, kể cả phục vụ
+              cho việc phán đoán nhu cầu thị trường. Trong trường hợp vi phạm
+              thì Người cung cấp dịch vụ phải hoàn toàn chịu trách nhiệm về các
+              hành vi của mình trước pháp luật.
+            </li>
+
+            <li>
+              - Người cung cấp dịch vụ phải tự chịu trách nhiệm về nội dung,
+              hình ảnh của thông tin doanh nghiệp và các thông tin khác cũng như
+              toàn bộ quá trình giao dịch giữa các Người cung cấp dịch vụ và
+              Người dùng trên Ứng dụng của TripC. Người cung cấp dịch vụ cam kết
+              cung cấp các dịch vụ của mình cho Người dùng đúng với nội dung mà
+              Người cung cấp dịch vụ công bố hoặc cam kết trên Ứng dụng TripC.
+            </li>
+
+            <li>
+              - Người cung cấp dịch vụ phải tự chịu trách nhiệm về bảo mật thông
+              tin, lưu giữ và mọi hoạt động sử dụng dịch vụ dưới tên đăng ký,
+              mật khẩu và hộp thư điện tử của mình. Người cung cấp dịch vụ có
+              trách nhiệm thông báo kịp thời cho TripC về những hành vi sử dụng
+              trái phép, lạm dụng, vi phạm bảo mật, lưu giữ tên đăng ký và mật
+              khẩu của mình để hai bên cùng hợp tác xử lý. TripC sẽ không chịu
+              trách nhiệm về các thiệt hại gây ra do sử dụng trái phép, lạm
+              dụng, vi phạm bảo mật, lưu giữ tên đăng ký và mật khẩu của Người
+              cung cấp dịch vụ mà không phải do lỗi của TripC. Các cam kết bảo
+              mật thông tin của TripC theo chính sách bảo mật không thay thế,
+              hay miễn trừ, các nghĩa vụ và trách nhiệm bảo mật thông tin của
+              Người cung cấp dịch vụ.
+            </li>
+
+            <li>
+              - Người cung cấp dịch vụ tự chịu trách nhiệm và cam kết tiến hành
+              và thực hiện các biện pháp cần thiết để bảo mật thông tin Người
+              dùng theo quy định của pháp luật. Người cung cấp dịch vụ cam kết
+              sẽ đảm bảo các nhân viên của mình tuân thủ nghĩa vụ bảo mật này.{" "}
+            </li>
+
+            <li>
+              Người cung cấp dịch vụ hoàn toàn chịu trách nhiệm và phải thực
+              hiện đầy đủ và đúng hạn các nghĩa vụ thuế và tài chính của mình
+              theo quy định của pháp luật áp dụng.
+            </li>
+
+            <li>
+              - Người cung cấp dịch vụ hoàn toàn chịu trách nhiệm và phải thực
+              hiện đầy đủ và đúng hạn các nghĩa vụ thuế và tài chính của mình
+              theo quy định của pháp luật áp dụng, cam kết sẽ đảm bảo các Người
+              cung cấp dịch vụ hoàn toàn chịu trách nhiác không đưn toàn chịu
+              trách nhiệm vàch không đưn toàn chịu trách nhiệm và phải thực hiện
+              đầy đủ và đúng hạn các nghĩa vụ.
+            </li>
+
+            <li>
+              - Người cung cấp dịch vụ còn có các nghĩa vụ khác nêu trong các
+              thỏa thuận hợp tác, các hợp đồng liên quan, trong Đề án này và
+              cũng như các chính sách khác của TripC đã được đăng tải trên Ứng
+              dụng TripC của Công ty, cũng như theo quy định pháp luật áp dụng.
+            </li>
+
+            <li>
+              - Có trách nhiệm thông báo kịp thời cho Ứng dụng cung cấp dịch vụ
+              TMĐT TripC về những hành vi sử dụng trái phép, lạm dụng, vi phạm
+              bảo mật, lưu giữ thông tin cá nhân của mình để hai bên cùng hợp
+              tác xử lý.
+            </li>
+            <li>
+              - Phối hợp với TripC trong việc giải quyết những vấn đề tranh chấp
+              với Người sử dụng dịch vụ, có trách nhiệm cung cấp thông tin về
+              giao dịch để hỗ trợ Ứng dụng cung cấp dịch vụ TMĐT TripC trong
+              việc các giải quyết tranh chấp đó.
+            </li>
+
+            <li>
+              - Có trách nhiệm bồi thường thiệt hại cho Người sử dụng dịch vụ
+              nếu chứng minh được lỗi đó thuộc về Người cung cấp dịch vụ.
+            </li>
+            <li>
+              - Thanh toán phí đầy đủ và đúng hạn cho Ban quản lý Ứng dụng cung
+              cấp dịch vụ TMĐT TripC theo hợp đồng dịch vụ đã ký.
+            </li>
+
+            <li>
+              - Tuân thủ thực hiện các biện pháp xử phạt (chế tài) của Ban quản
+              lý với những hành vi vi phạm của mình.
+            </li>
+          </ul>
+        </ul>
+
+        <ul className="mt-4">
+          <li className="font-medium" id="permission-responsibility-app-user">
+            XI. Quyền và trách nhiệm của Người sử dụng dịch vụ trên Ứng dụng
+            TripC
+          </li>
+
+          <ul>
+            <li className="font-medium" id="permission-app-user">
+              1. Quyền của Người sử dụng dịch vụ trên Ứng dụng cung cấp dịch vụ
+              TMĐT TripC
+            </li>
+
+            <li>
+              - Khi đăng ký trở thành Thành viên của TripC và được TripC chấp
+              thuận, Người dùng sẽ được khởi tạo tài khoản để sử dụng dịch vụ
+              trên Ứng dụng TripC và tham gia tận hưởng các ưu đãi nằm trong hệ
+              thống của TripC. Người dùng sẽ được cấp một tên đăng ký và mật
+              khẩu riêng để được vào sử dụng dịch vụ, quản lý tài khoản và các
+              thông tin lịch sử sử dụng, thông tin và hồ sơ cá nhân của mình
+              trong Ứng dụng của TripC.
+            </li>
+
+            <li>
+              - Được hưởng các chính sách ưu đãi do TripC hay các Đối tác TripC
+              cung cấp trên Ứng dụng TripC. Các chính sách ưu đãi này sẽ được
+              TripC giải quyết (nếu có) và sẽ được đăng tải trực tiếp trên Ứng
+              dụng TripC hoặc được gửi trực tiếp đến Người dùng vào từng thời
+              điểm.
+            </li>
+
+            <li>
+              - Có quyền đóng góp ý kiến cho TripC trong quá trình hoạt động.
+              Các ý kiến cần được gửi bằng thư điện tử đến cho TripC hoặc thông
+              qua Ứng dụng TripC.
+            </li>
+
+            <li>
+              - Tùy theo quyết định của TripC, Người dùng sẽ được TripC đào tạo,
+              hướng dẫn sử dụng các công cụ, các tính năng phục vụ cho việc quản
+              lý tài khoản và sử dụng các dịch vụ trên Ứng dụng TripC.{" "}
+            </li>
+
+            <li>
+              - Có các quyền được nêu trong các thỏa thuận hợp tác, các hợp đồng
+              liên quan, trong Đề án này và cũng như các chính sách khác của
+              Công ty/ TripC đã được đăng tải trên Ứng dụng TripC, cũng như theo
+              quy định pháp luật áp dụng.
+            </li>
+          </ul>
+
+          <ul>
+            <li className="font-medium" id="responsibility-app-user">
+              2. Nghĩa vụ và trách nhiệm Người sử dụng dịch vụ trên Ứng dụng
+              cung cấp dịch vụ TMĐT TripC
+            </li>
+            <li>
+              - Cung cấp đầy đủ, chính xác các thông tin cập nhật mới nhất được
+              yêu cầu khi khởi tạo tài khoản, hoặc trong quá trình sử dụng dịch
+              vụ, bao gồm các thông tin về Người dùng cho mục đích xác nhận định
+              danh Người dùng, bao gồm nhưng không giới hạn bởi các thông tin về
+              tên, tuổi, địa chỉ, số định danh cá nhân cũng như các thông tin
+              liên lạc. Bằng cách xác nhận tạo lập tài khoản trên Ứng dụng
+              TripC, Người dùng đồng ý và chấp thuận cho TripC được phép sử dụng
+              các thông tin này của Người dùng cho và liên quan đến việc quản lý
+              tài khoản của Người dùng cũng như việc vận hành và quản lý Ứng
+              dụng TripC, việc cung cấp, thực hiện dịch vụ trên nền tảng của
+              TripC và các hoạt động và mục đích hợp pháp khác hoặc theo yêu cầu
+              của các cơ quan có thẩm quyền. Người dùng hoàn toàn chịu trách
+              nhiệm về tính chính xác, trung thực của các thông tin được yêu cầu
+              này. TripC không chịu trách nhiệm cũng như không giải quyết mọi
+              khiếu nại có liên quan đến quyền lợi của Người dùng nếu các thông
+              tin được yêu cầu do Người dùng cung cấp không chính xác, đầy đủ
+              hoặc cập nhật. Người dùng phải nhanh chóng thông báo, cập nhật các
+              thông tin liên quan.
+            </li>
+            <li>
+              - Chịu trách nhiệm giữ bảo mật các thông tin của mình khi đăng tải
+              các thông tin liên quan trên Ứng dụng TripC, bao gồm tất cả nhưng
+              không giới hạn bởi các thông tin đăng nhập tài khoản, tên đăng ký,
+              mật khẩu, hộp thư điện tử, các hồ sơ cá nhân khác. Bằng cách xác
+              nhận tạo lập tài khoản trên Ứng dụng TripC, Người dùng đồng ý và
+              chấp thuận cho TripC cũng như các Đối tác liên quan của TripC và
+              nhân viên của các Đối tác này, như có liên quan, được quyền truy
+              cập và sử dụng các thông tin của Người dùng cho việc cung cấp và
+              thực hiện dịch vụ cũng như việc các Đối tác cung cấp các dịch vụ
+              liên quan cho Người dùng mà không cần phải có thêm một chấp thuận
+              hay đồng ý nào khác. Việc đồng ý sử dụng mã số OTP để nhận thông
+              tin từ Ứng dụng TripC là hành vi tự nguyện của Khách hàng và TripC
+              không chịu trách nhiệm trong trường hợp khách hàng, vô tình hay cố
+              ý, để cá nhân khác truy cập tài khoản của mình hoặc có hành vi sử
+              dụng trái phép, lạm dụng, vi phạm bảo mật, lưu giữ tên đăng ký và
+              mật khẩu của Người dùng.
+            </li>
+
+            <li>
+              - Có trách nhiệm thông báo kịp thời cho TripC về những hành vi sử
+              dụng trái phép, lạm dụng, vi phạm bảo mật, lưu giữ tên đăng ký và
+              mật khẩu của mình để hai bên cùng hợp tác xử lý. TripC sẽ không
+              chịu trách nhiệm về các thiệt hại gây ra do sử dụng trái phép, lạm
+              dụng, vi phạm bảo mật, lưu giữ tên đăng ký và mật khẩu của Người
+              dùng mà không phải do lỗi của TripC.
+            </li>
+
+            <li>
+              - Cam kết không được thay đổi, chỉnh sửa, sao chép, truyền bá,
+              phân phối, cung cấp và tạo những công cụ tương tự như Ứng dụng
+              và/hoặc dịch vụ do TripC cung cấp cho một bên thứ ba nếu không
+              được sự đồng ý của TripC. Người dùng không được phép chuyển giao,
+              chuyển nhượng tài khoản của mình cho bất kỳ bên thứ ba nào mà
+              không có sự đồng ý của TripC.
+            </li>
+
+            <li>
+              - Có trách nhiệm và nghĩa vụ tuân thủ pháp luật áp dụng, các quy
+              định của Đề án này, điều khoản sử dụng cũng như các chính sách,
+              quy định, quy chế, quy trình và hướng dẫn được TripC viện dẫn
+              trong Đề án này hoặc được TripC công bố hoặc áp dụng vào từng thời
+              điểm.
+            </li>
+
+            <li>
+              - Cam kết, đồng ý không sử dụng dịch vụ cũng như Ứng dụng TripC
+              vào những mục đích bất hợp pháp, không hợp lý, lừa đảo, đe dọa,
+              thăm dò thông tin bất hợp pháp, phá hoại, tạo ra và phát tán virus
+              gây hư hại hệ thống, cấu hình, truyền tải thông tin của Ứng dụng
+              TripC hay sử dụng dịch vụ liên quan vào mục đích đầu cơ, lũng đoạn
+              thị trường tạo những đơn đặt hàng, kể cả phục vụ cho việc phán
+              đoán nhu cầu thị trường. Trong trường hợp vi phạm thì Người dùng
+              phải hoàn toàn chịu trách nhiệm về các hành vi của mình trước pháp
+              luật.
+            </li>
+
+            <li>
+              - Có trách nhiệm cung cấp các thông tin, tài liệu cá nhân cũng như
+              liên quan đến giao dịch giữa Đối tác và Người dùng và nghĩa vụ hợp
+              tác, phối hợp với TripC cho và trong quá trình giải quyết các
+              tranh chấp, khiếu nại, khiếu kiện phát sinh giữa Đối tác và Người
+              dùng. Người dùng cần tuân thủ các yêu cầu và quy định trong chính
+              sách hỗ trợ giải quyết khiếu nại và tranh chấp như được quy định
+              trong của Quy chế hoạt động. Người dùng có trách nhiệm bồi thường
+              các thiệt hại gây bởi hoặc do lỗi của Người dùng trong quá trình
+              sử dụng dịch vụ hoặc các hoạt động khác trên Ứng dụng TripC.
+            </li>
+
+            <li>
+              - Các nghĩa vụ được nêu trong các thỏa thuận hợp tác, các hợp đồng
+              liên quan, trong Đề án này và cũng như các chính sách khác của
+              Công ty/ TripC đã được đăng tải trên Ứng dụng TripC, cũng như theo
+              quy định pháp luật áp dụng.
+            </li>
+          </ul>
+        </ul>
+
+        <ul className="mt-4">
+          <li className="font-medium" id="corrective-measure">
+            XII. Biện pháp xử lý vi phạm đối với những người không tuân thủ quy
+            chế hoạt động của Ứng dụng cung cấp dịch vụ TMĐT TripC
+          </li>
+
+          <ul>
+            <li>
+              Trường hợp có cơ sở và căn cứ chứng minh Người cung cấp dịch vụ
+              hoặc Người sử dụng dịch vụ không tuân thủ quy chế hoạt động của
+              Ứng dụng cung cấp dịch vụ TMĐT TripC, Ban quản lý Ứng dụng sẽ áp
+              dụng một hoặc đồng thời các biện pháp sau:
+            </li>
+            <li>
+              - Từ chối hoặc chấm dứt quyền sử dụng dịch vụ của thành viên đã
+              đăng ký trên Ứng dụng cung cấp dịch vụ TMĐT.
+            </li>
+            <li>
+              - TripC có thể chấm dứt quyền thành viên, quyền sử dụng một hoặc
+              tất cả các dịch vụ của thành viên và sẽ thông báo cho thành viên
+              trong thời hạn ít nhất là một (01) tháng trong trường hợp thành
+              viên vi phạm các Quy chế của Ứng dụng TripC hoặc có những hành vi
+              ảnh hưởng đến hoạt động kinh doanh trên TripC.
+            </li>
+            <li>
+              - Ban quản lý TripC có quyền quyết định về việc lưu giữ hay loại
+              bỏ sản phẩm đã đăng trên Ứng dụng cung cấp dịch vụ TMĐT TripC mà
+              không cần báo trước.
+            </li>
+            <li>
+              - Thành viên vi phạm các quy định về danh mục hàng hóa bị cấm kinh
+              doanh hoặc/và cấm quảng cáo trên TripC sẽ bị xóa tài khoản và
+              không được đăng tin lưu trú trên TripC, đồng thời phải tự chịu
+              trách nhiệm pháp lý đối với các hành vi vi phạm pháp luật Việt Nam
+              hiện hành.
+            </li>
+            <li>
+              - Trường hợp thành viên vi phạm quy chế hoạt động của Ứng dụng
+              cung cấp dịch vụ TMĐT TripC dẫn đến thiệt hại cho Ứng dụng cung
+              cấp dịch vụ TMĐT hoặc Công ty, Ban quản lý Ứng dụng cung cấp dịch
+              vụ TMĐT sẽ yêu cầu thành viên bồi thường thiệt hại theo các giấy
+              tờ, căn cứ chứng minh hợp lệ.
+            </li>
+          </ul>
+        </ul>
+
+        <ul className="mt-4">
+          <li className="font-medium" id="applicable-terms">
+            XIII. Điều khoản áp dụng
+          </li>
+          <li>
+            Quy chế của Ứng dụng cung cấp dịch vụ TMĐT TripC chính thức có hiệu
+            lực thi hành kể từ ngày ký Quyết định ban hành kèm theo Quy chế này.
+            Ứng dụng cung cấp dịch vụ TMĐT TripC có quyền thay đổi Quy chế bằng
+            cách thông báo lên Ứng dụng TripC cho các thành viên biết. Quy chế
+            sửa đổi có hiệu lực kể từ ngày Quyết định về việc sửa đổi Quy chế có
+            hiệu lực. Việc thành viên tiếp tục sử dụng dịch vụ sau khi Quy chế
+            sửa đổi được công bố và thực thi đồng nghĩa với việc họ đã chấp nhận
+            Quy chế sửa đổi này.
+          </li>
+          <li>
+            Quy chế hoạt động sẽ được TripC cập nhật bổ sung liên tục theo thực
+            tế hoạt động, theo quy định pháp luật hiện hành và sẽ được thông báo
+            công khai trước 07 (bảy) ngày trên Ứng dụng trước khi áp dụng chính
+            thức. Thành viên tham gia Ứng dụng cung cấp dịch vụ TMĐT TripC có
+            trách nhiệm tuân theo quy chế hiện hành khi giao dịch trên Ứng dụng
+            cung cấp dịch vụ TMĐT.
+          </li>
+        </ul>
+
+        <ul className="mt-4">
+          <li className="font-medium">XIV. Điều khoản cam kết</li>
+
+          <li>
+            Mọi thành viên tham gia giao dịch trên Ứng dụng cung cấp dịch vụ
+            TMĐT TripC cam kết chấp thuận thực hiện và tuân theo đúng nội dung
+            Quy chế này.
+          </li>
+
+          <li>
+            Mọi thắc mắc của khách hàng/Người cung cấp dịch vụ xin vui lòng liên
+            hệ với Ban quản lý Ứng dụng cung cấp dịch vụ TMĐT TripC theo thông
+            tin dưới đây để được giải đáp:
+          </li>
+
+          <li>Địa chỉ liên hệ chính thức:</li>
+        </ul>
+
+        <ul className="mt-4">
+          <li className="font-medium">
+            - Ứng dụng cung cấp dịch vụ thương mại điện tử TripC
+          </li>
+
+          <li>- CÔNG TY CỔ PHẦN ALLY AI</li>
+          <li>
+            - Địa chỉ:{" "}
+            <span className="italic">
+              153 Đống Đa, Phường Thạch Thang, Quận Hải Châu, Thành phố Đà Nẵng
+            </span>
+          </li>
+          <li>
+            - Hotline: <span className="italic">0935479122</span>
+          </li>
+          <li>
+            - Email: <span className="italic">Cs@tripc.ai</span>
+          </li>
         </ul>
       </div>
     </div>
